@@ -1,17 +1,18 @@
-const toilet = {
-    humanWaste : "human waste",
-    toiletPaper : "toilet paper"
-}
-const notToilet = {
-    wetWipes : "wet wipes",
-    paperTowels : "paper towels",
-    feminineHygieneProducts : "feminine hygiene products",
-    dentalFloss : "dental floss",
-    diapers : "diapers",
-    hair : "hair",
-    cottonBallsAndSwabs : "cotton balls and swabs",
-    medications : "medications",
-    cookingGreaseAndOil : "cooking grease and oil",
-    foodScraps : "food scraps",
-    catLitter : "cat litter",
-}
+export const toilet: Array<string> = [
+    "human waste",
+    "toilet paper"
+];
+export const notToilet: Array<string> = [
+    "wet wipes",
+    "paper towels",
+    "feminine hygiene products",
+    "dental floss",
+    "diapers",
+    "hair",
+    "cotton balls and swabs",
+    "medications",
+    "cooking grease and oil",
+    "food scraps",
+    "cat litter",
+    "cock and balls"
+];
