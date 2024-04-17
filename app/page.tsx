@@ -23,8 +23,12 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [highScore, setHighScore] = useState(localStorage.getItem('highScore') || 0);
-
+  const [highScore, setHighScore] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('highScore') || 0;
+    }
+    return 0;
+  });
 
   const [playDing] = useSound(ding);
   const [playBruh] = useSound(bruh);
@@ -37,7 +41,9 @@ export default function Home() {
   useEffect(() => {
     if (score > Number(highScore)) {
       setHighScore(score);
-      localStorage.setItem('highScore', score.toString());
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('highScore', score.toString());
+      }
     }
   }, [score]);
 

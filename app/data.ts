@@ -14,5 +14,4 @@ export const notToilet: Array<string> = [
     "cooking grease and oil",
     "food scraps",
     "cat litter",
-    "cock and balls"
 ];
