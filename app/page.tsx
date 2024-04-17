@@ -23,12 +23,8 @@ export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [isCorrect, setIsCorrect] = useState(false);
-  const [highScore, setHighScore] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return localStorage.getItem('highScore') || 0;
-    }
-    return 0;
-  });
+  const [highScore, setHighScore] = useState(0);
+
 
   const [playDing] = useSound(ding);
   const [playBruh] = useSound(bruh);
@@ -46,6 +42,12 @@ export default function Home() {
       }
     }
   }, [score]);
+
+  useEffect(() => {
+  if (typeof window !== 'undefined') {
+    setHighScore(Number(localStorage.getItem('highScore')) || 0);
+  }
+}, []);
 
 
 
@@ -71,6 +73,7 @@ export default function Home() {
       setScore(prevScore => prevScore + 1);
       playDing();
     } else {
+      setScore(0);
       playBruh();
     }
 
@@ -92,7 +95,7 @@ export default function Home() {
 
       </div>
       <div className="score" style={{ animation: isCorrect ? 'score-increase 1s' : '' }}>
-        Score: {score} {score > 10 ? '🔥' : ''}
+        Score: {score > 10 ? '🔥' : ''} {score} {score > 10 ? '🔥' : ''}
       </div>
     </div>
   );
