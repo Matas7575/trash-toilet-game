@@ -20,7 +20,7 @@ body{
     max-height: 50%;
     text-align: center;
     text-transform: capitalize;
-    background-color: #13b3ec;
+    /* background-color: #13b3ec; */
     min-width: 7rem;
     max-width: 7rem;
     box-shadow: 0px 4px 8px 0px rgba(34, 20, 20, 0.2);
