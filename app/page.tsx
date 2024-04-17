@@ -8,6 +8,7 @@ import useSound from "use-sound";
 import ding from "../sounds/ding.mp3";
 // @ts-ignore
 import bruh from "../sounds/bruh.mp3";
+// @ts-ignore
 import rizz from "../sounds/rizz.mp3";
 import toiletImage from "../public/images/spiningToilet.gif";
 import trashCanImage from "../public/images/trashCan.gif";
