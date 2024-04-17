@@ -1,6 +1,6 @@
 /* styles/Home.module.css */
 
-body{
+body {
   background-color: #e7e6e9;
 }
 
@@ -13,45 +13,51 @@ body{
 }
 
 .trash-item {
-    margin: 20px;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    max-height: 50%;
-    text-align: center;
-    text-transform: capitalize;
-    /* background-color: #13b3ec; */
-    min-width: 7rem;
-    max-width: 7rem;
-    box-shadow: 0px 4px 8px 0px rgba(34, 20, 20, 0.2);
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  max-height: 50%;
+  text-align: center;
+  text-transform: capitalize;
+  /* background-color: #13b3ec; */
+  min-width: 7rem;
+  max-width: 7rem;
+  box-shadow: 0px 4px 8px 0px rgba(34, 20, 20, 0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-.wrongGuess
-{
+.wrongGuess {
   background-color: #fc0339;
 }
 
-.correctGuess
-{
+.correctGuess {
   background-color: #14eb53;
 }
 
 @keyframes score-increase {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.5); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .score {
   transition: transform 1s;
 }
 
-.toiletImage{
+.toiletImage {
   width: 100px;
   height: 200px;
 }
 
-.trashCanImage{
+.trashCanImage {
   width: 100px;
   height: 150px;
 }
